@@ -5,13 +5,41 @@
   global = this;
 
   Main = (function() {
+    var ANIMATION_IMG_NUM;
+
+    ANIMATION_IMG_NUM = 4;
+
     function Main() {
       U.phello();
       this.initCss();
+      this.preloadImgs();
+      this.startAnimation();
       return;
     }
 
     Main.prototype.initCss = function() {};
+
+    Main.prototype.preloadImgs = function() {
+      var i, _i, _results;
+      _results = [];
+      for (i = _i = 0; 0 <= ANIMATION_IMG_NUM ? _i < ANIMATION_IMG_NUM : _i > ANIMATION_IMG_NUM; i = 0 <= ANIMATION_IMG_NUM ? ++_i : --_i) {
+        _results.push($('<img>').attr('src', "img/chara" + i + ".png"));
+      }
+      return _results;
+    };
+
+    Main.prototype.startAnimation = function() {
+      var i, update;
+      i = 0;
+      update = function() {
+        $('#main>img').attr('src', "img/chara" + i + ".png");
+        i++;
+        if (i === ANIMATION_IMG_NUM) {
+          i = 0;
+        }
+      };
+      setInterval(update, 100);
+    };
 
     return Main;
 
