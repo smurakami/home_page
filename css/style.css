@@ -1,0 +1,16 @@
+body {
+  background-color: #ffd700; }
+  body #title {
+    width: 500px;
+    height: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    background-color: green; }
+  body #main {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 50%;
+    margin-left: -250px;
+    background-color: red; }

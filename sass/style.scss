@@ -1,0 +1,26 @@
+@mixin block-h-align-center($width) {
+    position: relative;
+    left: 50%;
+    margin-left: -$width/2;
+}
+
+
+body {
+  background-color: #ffd700;
+  #title{
+    $width: 500px;
+    $height: 150px;
+    width: $width;
+    height: $height;
+    @include block-h-align-center($width);
+    background-color: green;
+  }
+  #main {
+    $width: 500px;
+    $height: 500px;
+    width: $width;
+    height: $height;
+    @include block-h-align-center($width);
+    background-color: red;
+  }
+}
