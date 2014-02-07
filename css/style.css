@@ -5,12 +5,10 @@ body {
     height: 150px;
     position: relative;
     left: 50%;
-    margin-left: -250px;
-    background-color: green; }
+    margin-left: -250px; }
   body #main {
     width: 500px;
     height: 500px;
     position: relative;
     left: 50%;
-    margin-left: -250px;
-    background-color: red; }
+    margin-left: -250px; }
