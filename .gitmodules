@@ -1,0 +1,3 @@
+[submodule "works/js/toilet"]
+	path = works/js/toilet
+	url = git@github.com:smurakami/js_toilet.git
