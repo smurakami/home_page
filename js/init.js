@@ -38,13 +38,7 @@
     };
 
     Main.prototype.startLoop = function() {
-      var mainLoop, self;
-      self = this;
-      mainLoop = function() {
-        self.mainCanvas.update();
-        return self.mainCanvas.draw();
-      };
-      setInterval(mainLoop, 100);
+      this.mainCanvas.startAnimation();
     };
 
     return Main;
@@ -52,6 +46,8 @@
   })();
 
   ImgAnimationCanvas = (function() {
+    var stopAnimation;
+
     function ImgAnimationCanvas(canvasId, img_srcs) {
       var img, src, _i, _len;
       this.canvas = document.getElementById(canvasId);
@@ -68,6 +64,20 @@
       this.maxflame = this.imgs.length;
       this.flame = 0;
     }
+
+    ImgAnimationCanvas.prototype.startAnimation = function() {
+      var mainLoop, self;
+      self = this;
+      mainLoop = function() {
+        self.update();
+        return self.draw();
+      };
+      return this.timer = 　setInterval(mainLoop, 100);
+    };
+
+    stopAnimation = function() {
+      return clearInterval(this.timer);
+    };
 
     ImgAnimationCanvas.prototype.update = function() {
       this.flame++;

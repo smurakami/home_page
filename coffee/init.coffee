@@ -18,11 +18,7 @@ class Main
       $('<img>').attr 'src', "img/chara#{i}.png"
 
   startLoop: ->
-    self = this
-    mainLoop = ->
-      self.mainCanvas.update()
-      self.mainCanvas.draw()
-    setInterval mainLoop, 100
+    @mainCanvas.startAnimation()
     return
 
 
@@ -40,6 +36,15 @@ class ImgAnimationCanvas
       @imgs.push img
     @maxflame = @imgs.length
     @flame = 0
+
+  startAnimation: ->
+    self = this
+    mainLoop = ->
+      self.update()
+      self.draw()
+    @timer =　setInterval mainLoop, 100
+
+  stopAnimation = -> clearInterval(@timer)
 
   update: ->
     @flame++
