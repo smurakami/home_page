@@ -5,36 +5,53 @@ global = this
 class Main
   ANIMATION_IMG_NUM = 4
   constructor: ->
-    U.phello()
-    @initCss()
-    @preloadImgs()
-    @startAnimation()
+    @initMainCanvas()
+    @startLoop()
     return
 
-  initCss: ->
-    return
+  initMainCanvas: ->
+    img_srcs = ("img/chara#{i}.png" for i in [0...ANIMATION_IMG_NUM])
+    @mainCanvas = new ImgAnimationCanvas('main-canvas', img_srcs)
 
   preloadImgs: ->
     for i in [0...ANIMATION_IMG_NUM]
       $('<img>').attr 'src', "img/chara#{i}.png"
 
-  startAnimation: ->
-    i = 0
-    update = ->
-      $('#main>img').attr 'src', "img/chara#{i}.png"
-      i++
-      if i == ANIMATION_IMG_NUM
-        i = 0
-      return
-    setInterval update, 100
+  startLoop: ->
+    self = this
+    mainLoop = ->
+      self.mainCanvas.update()
+      self.mainCanvas.draw()
+    setInterval mainLoop, 100
     return
+
+
+# image animation canvas
+class ImgAnimationCanvas
+  constructor: (canvasId, img_srcs) ->
+    @canvas = document.getElementById(canvasId)
+    @width  = @canvas.width
+    @height = @canvas.height
+    @ctx = @canvas.getContext('2d')
+    @imgs = []
+    for src in img_srcs
+      img = new Image()
+      img.src = src
+      @imgs.push img
+    @maxflame = @imgs.length
+    @flame = 0
+
+  update: ->
+    @flame++
+    if @flame >= @maxflame then @flame = 0
+
+  draw: ->
+    @ctx.clearRect(0, 0, @width, @height)
+    @ctx.drawImage(@imgs[@flame], 0, 0, @width, @height)
 
 
 # utility
 global.Util =
-  phello: ->
-    console.log "hello"
-
   randomInt: (n) -> M.floor M.random() * n
 
   generateRandomColor255: (chroma = 255) ->
@@ -50,7 +67,6 @@ Array.prototype.shuffle = ->
   while buf.length > 0
     this.push buf.pop()
   return this
-
 
 # manage names
 M = Math

@@ -8,19 +8,23 @@
 body {
   background-color: #ffd700;
   #title{
-    $width: 500px;
-    $height: 150px;
-    width: $width;
-    height: $height;
-    @include block-h-align-center($width);
+    img {
+      $width: 500px;
+      $height: 150px;
+      width: $width;
+      height: $height;
+      @include block-h-align-center($width);
+    }
     // background-color: green;
   }
   #main {
-    $width: 500px;
-    $height: 500px;
-    width: $width;
-    height: $height;
-    @include block-h-align-center($width);
+    #main-canvas {
+      $width: 500px;
+      $height: 500px;
+      width: $width;
+      height: $height;
+      @include block-h-align-center($width);
+    }
     // background-color: red;
   }
 }

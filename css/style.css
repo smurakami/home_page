@@ -1,12 +1,12 @@
 body {
   background-color: #ffd700; }
-  body #title {
+  body #title img {
     width: 500px;
     height: 150px;
     position: relative;
     left: 50%;
     margin-left: -250px; }
-  body #main {
+  body #main #main-canvas {
     width: 500px;
     height: 500px;
     position: relative;
