@@ -25,6 +25,26 @@ body {
       height: $height;
       @include block-h-align-center($width);
     }
+    a#link-to-toybox{
+      display: block;
+      $width: 150px;
+      $height: 150px;
+      width: $width;
+      height: $height;
+      position: relative;
+      left: 50%;
+      margin-left: 100px;
+    }
     // background-color: red;
+  }
+  // for debug
+  .red {
+    background-color: red;
+  }
+  .green {
+    background-color: green;
+  }
+  .blue {
+    background-color: blue;
   }
 }

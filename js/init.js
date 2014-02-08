@@ -11,7 +11,7 @@
 
     function Main() {
       this.initMainCanvas();
-      this.startLoop();
+      this.startMainAnimation();
       return;
     }
 
@@ -37,7 +37,7 @@
       return _results;
     };
 
-    Main.prototype.startLoop = function() {
+    Main.prototype.startMainAnimation = function() {
       this.mainCanvas.startAnimation();
     };
 

@@ -12,3 +12,16 @@ body {
     position: relative;
     left: 50%;
     margin-left: -250px; }
+  body #main a#link-to-toybox {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    left: 50%;
+    margin-left: 100px; }
+  body .red {
+    background-color: red; }
+  body .green {
+    background-color: green; }
+  body .blue {
+    background-color: blue; }

@@ -6,7 +6,7 @@ class Main
   ANIMATION_IMG_NUM = 4
   constructor: ->
     @initMainCanvas()
-    @startLoop()
+    @startMainAnimation()
     return
 
   initMainCanvas: ->
@@ -17,7 +17,7 @@ class Main
     for i in [0...ANIMATION_IMG_NUM]
       $('<img>').attr 'src', "img/chara#{i}.png"
 
-  startLoop: ->
+  startMainAnimation: ->
     @mainCanvas.startAnimation()
     return
 
@@ -44,7 +44,8 @@ class ImgAnimationCanvas
       self.draw()
     @timer =　setInterval mainLoop, 100
 
-  stopAnimation = -> clearInterval(@timer)
+  stopAnimation = ->
+   clearInterval(@timer)
 
   update: ->
     @flame++
