@@ -1,5 +1,5 @@
 #!/bin/bash
 
 for repo in `cat git_repos.dat`; do
-  echo $repo
+  git clone $repo
 done
