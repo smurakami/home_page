@@ -4,7 +4,6 @@
     margin-left: -$width/2;
 }
 
-
 body {
   background-color: #ffd700;
   #title{
@@ -48,3 +47,26 @@ body {
     background-color: blue;
   }
 }
+
+/* smart */
+
+body {
+  background-color: red;
+}
+
+/* tablet */
+
+@media all and (min-width: 480px) {
+body {
+  background-color: green;
+}
+}
+
+/* pc */
+
+@media all and (min-width: 768px) {
+body {
+  background-color: blue;
+}
+}
+
