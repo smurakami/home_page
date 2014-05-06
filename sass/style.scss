@@ -50,23 +50,25 @@ body {
 
 /* smart */
 
-body {
-  background-color: red;
+@media all {
+  body {
+    background-color: red;
+  }
 }
 
 /* tablet */
 
 @media all and (min-width: 480px) {
-body {
-  background-color: green;
-}
+  body {
+    background-color: green;
+  }
 }
 
 /* pc */
 
 @media all and (min-width: 768px) {
-body {
-  background-color: blue;
-}
+  body {
+    background-color: blue;
+  }
 }
 
