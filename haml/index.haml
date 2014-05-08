@@ -14,9 +14,24 @@
   %script{:src => "js/jquery-2.1.0.min.js"}
   %script{:src => "js/init.js"}
 %body
-  %div#title
+  #header
     %img{src: 'img/title.png'}
-  %div#main
-    %canvas#main-canvas{width: 500, height: 500}
-    / %a#link-to-toybox{href: "#"}
-    /   %canvas#toybox-canvas{width: 150, height: 150}
+    %a{href: '#'} about
+    %a{href: '#'} skill
+    %a{href: '#'} works
+    %a{href: '#'} contact
+  #title
+    title
+  #about
+    about
+  #skill
+    skill
+  #works
+    works
+  #contact
+    contact
+
+  / %div#title
+  /   %img{src: 'img/title.png'}
+  / %div#main
+  /   %canvas#main-canvas{width: 500, height: 500}

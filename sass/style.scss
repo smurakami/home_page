@@ -4,8 +4,22 @@
     margin-left: -$width/2;
 }
 
+// ======
+// colors
+// ======
+
+$white: #FFFFFF;
+$gray: #E3E3E3;
+$red: #C7243A;
+$yellow: #EDAD0B;
+$blue: #0086AB;
+$green: #5EC84E;
+
+// ====
+// prev
+// ====
+
 body {
-  background-color: #ffd700;
   #title{
     img {
       $width: 500px;
@@ -48,11 +62,35 @@ body {
   }
 }
 
+
+#header {
+  background-color: $gray;
+}
+
+#title {
+  background-color: red;
+}
+
+#about {
+  background-color: red;
+}
+
+#skill {
+  background-color: red;
+}
+
+#works {
+  background-color: red;
+}
+
+#contact {
+  background-color: red;
+}
+
 /* smart */
 
 @media all {
   body {
-    background-color: red;
   }
 }
 
@@ -60,7 +98,6 @@ body {
 
 @media all and (min-width: 480px) {
   body {
-    background-color: green;
   }
 }
 
@@ -68,7 +105,6 @@ body {
 
 @media all and (min-width: 768px) {
   body {
-    background-color: blue;
   }
 }
 

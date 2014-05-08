@@ -1,40 +1,47 @@
-body {
-  background-color: #ffd700; }
-  body #title img {
-    width: 500px;
-    height: 150px;
-    position: relative;
-    left: 50%;
-    margin-left: -250px; }
-  body #main #main-canvas {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    left: 50%;
-    margin-left: -250px; }
-  body #main a#link-to-toybox {
-    display: block;
-    width: 150px;
-    height: 150px;
-    position: relative;
-    left: 50%;
-    margin-left: 100px; }
-  body .red {
-    background-color: red; }
-  body .green {
-    background-color: green; }
-  body .blue {
-    background-color: blue; }
+body #title img {
+  width: 500px;
+  height: 150px;
+  position: relative;
+  left: 50%;
+  margin-left: -250px; }
+body #main #main-canvas {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  left: 50%;
+  margin-left: -250px; }
+body #main a#link-to-toybox {
+  display: block;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  left: 50%;
+  margin-left: 100px; }
+body .red {
+  background-color: red; }
+body .green {
+  background-color: green; }
+body .blue {
+  background-color: blue; }
+
+#header {
+  background-color: #e3e3e3; }
+
+#title {
+  background-color: red; }
+
+#about {
+  background-color: red; }
+
+#skill {
+  background-color: red; }
+
+#works {
+  background-color: red; }
+
+#contact {
+  background-color: red; }
 
 /* smart */
-@media all {
-  body {
-    background-color: red; } }
 /* tablet */
-@media all and (min-width: 480px) {
-  body {
-    background-color: green; } }
 /* pc */
-@media all and (min-width: 768px) {
-  body {
-    background-color: blue; } }
