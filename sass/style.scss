@@ -1,3 +1,19 @@
+@charset 'utf-8';
+
+/* font */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
+
+@font-face {
+  font-family: 'mfg_labs_iconsetregular';
+  src: url('../font/mfglabsiconset-webfont.eot');
+  src: url('../font/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../font/mfglabsiconset-webfont.woff') format('woff'),
+       url('../font/mfglabsiconset-webfont.ttf') format('truetype'),
+       url('../font/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // ======
 // colors
 // ======
@@ -13,28 +29,62 @@ $green: #5EC84E;
 // contents
 // ========
 
+a {
+  text-decoration: none;
+}
+
+.constraint {
+  width: 540px;
+}
+
+.title {
+  font-size: 20px;
+  padding: 8px;
+  border-bottom: solid 3px black;
+  width: 270px;
+}
+
 #header {
   background-color: $gray;
 }
 
-#title {
+#header-nav {
+  float: right;
+}
+
+#intro {
   background-color: red;
+  .title {
+    border-bottom-color: $red;
+  }
 }
 
 #about {
   background-color: green;
+  .title {
+    border-bottom-color: $blue;
+  }
 }
 
 #skill {
   background-color: yellow;
+  .title {
+    border-bottom-color: $yellow;
+  }
 }
 
 #works {
   background-color: blue;
+  .title {
+    border-bottom-color: $red;
+  }
 }
 
 #contact {
   background-color: orange;
+  .title {
+    border-bottom-color: $red;
+  }
 }
 
 /* smart */
