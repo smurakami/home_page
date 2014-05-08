@@ -1,11 +1,12 @@
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
-@font-face {
-  font-family: 'mfg_labs_iconsetregular';
-  src: url("../font/mfglabsiconset-webfont.eot");
-  src: url("../font/mfglabsiconset-webfont.eot?#iefix") format("embedded-opentype"), url("../font/mfglabsiconset-webfont.woff") format("woff"), url("../font/mfglabsiconset-webfont.ttf") format("truetype"), url("../font/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular") format("svg");
+body {
+  background-color: #fff;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: normal;
-  font-style: normal; }
+  font-weight: 400;
+  color: #444; }
 
 a {
   text-decoration: none; }
@@ -22,33 +23,26 @@ a {
 #header {
   background-color: #e3e3e3; }
 
+#intro {
+  font-size: 40px; }
+
 #header-nav {
   float: right; }
 
-#intro {
-  background-color: red; }
-  #intro .title {
-    border-bottom-color: #c7243a; }
+#intro .title {
+  border-bottom-color: #c7243a; }
 
-#about {
-  background-color: green; }
-  #about .title {
-    border-bottom-color: #0086ab; }
+#about .title {
+  border-bottom-color: #0086ab; }
 
-#skill {
-  background-color: yellow; }
-  #skill .title {
-    border-bottom-color: #edad0b; }
+#skill .title {
+  border-bottom-color: #edad0b; }
 
-#works {
-  background-color: blue; }
-  #works .title {
-    border-bottom-color: #c7243a; }
+#works .title {
+  border-bottom-color: #c7243a; }
 
-#contact {
-  background-color: orange; }
-  #contact .title {
-    border-bottom-color: #c7243a; }
+#contact .title {
+  border-bottom-color: #c7243a; }
 
 /* smart */
 /* tablet */

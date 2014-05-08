@@ -3,17 +3,6 @@
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 
-@font-face {
-  font-family: 'mfg_labs_iconsetregular';
-  src: url('../font/mfglabsiconset-webfont.eot');
-  src: url('../font/mfglabsiconset-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../font/mfglabsiconset-webfont.woff') format('woff'),
-       url('../font/mfglabsiconset-webfont.ttf') format('truetype'),
-       url('../font/mfglabsiconset-webfont.svg#mfg_labs_iconsetregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 // ======
 // colors
 // ======
@@ -28,6 +17,15 @@ $green: #5EC84E;
 // ========
 // contents
 // ========
+
+body {
+  background-color: #fff;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-weight: 400;
+  color: #444;
+}
 
 a {
   text-decoration: none;
@@ -48,40 +46,39 @@ a {
   background-color: $gray;
 }
 
+#intro {
+  font-size:40px;
+}
+
 #header-nav {
   float: right;
 }
 
 #intro {
-  background-color: red;
   .title {
     border-bottom-color: $red;
   }
 }
 
 #about {
-  background-color: green;
   .title {
     border-bottom-color: $blue;
   }
 }
 
 #skill {
-  background-color: yellow;
   .title {
     border-bottom-color: $yellow;
   }
 }
 
 #works {
-  background-color: blue;
   .title {
     border-bottom-color: $red;
   }
 }
 
 #contact {
-  background-color: orange;
   .title {
     border-bottom-color: $red;
   }
