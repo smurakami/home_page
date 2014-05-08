@@ -32,7 +32,7 @@ a {
 }
 
 .constraint {
-  width: 540px;
+  margin: 0 auto;
 }
 
 .title {
@@ -44,64 +44,63 @@ a {
 
 #header {
   background-color: $gray;
+  overflow: hidden;
 }
 
-#intro {
+#name {
   font-size:40px;
 }
 
 #header-nav {
-  float: right;
-}
-
-#intro {
-  .title {
-    border-bottom-color: $red;
-  }
+  position: absolute;
+  right: 0;
 }
 
 #about {
   .title {
-    border-bottom-color: $blue;
+    border-bottom-color: $red;
   }
 }
 
 #skill {
   .title {
-    border-bottom-color: $yellow;
+    border-bottom-color: $blue;
   }
 }
 
 #works {
   .title {
-    border-bottom-color: $red;
+    border-bottom-color: $yellow;
   }
 }
 
 #contact {
   .title {
-    border-bottom-color: $red;
+    border-bottom-color: $green;
   }
 }
 
 /* smart */
 
 @media all {
-  body {
+  .constraint {
+    width: 270px;
   }
 }
 
 /* tablet */
 
 @media all and (min-width: 480px) {
-  body {
+  .constraint {
+    width: 540px;
   }
 }
 
 /* pc */
 
 @media all and (min-width: 768px) {
-  body {
+  .constraint {
+    width: 810px;
   }
 }
 

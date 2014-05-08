@@ -12,7 +12,7 @@ a {
   text-decoration: none; }
 
 .constraint {
-  width: 540px; }
+  margin: 0 auto; }
 
 .title {
   font-size: 20px;
@@ -21,29 +21,37 @@ a {
   width: 270px; }
 
 #header {
-  background-color: #e3e3e3; }
+  background-color: #e3e3e3;
+  overflow: hidden; }
 
-#intro {
+#name {
   font-size: 40px; }
 
 #header-nav {
-  float: right; }
-
-#intro .title {
-  border-bottom-color: #c7243a; }
+  position: absolute;
+  right: 0; }
 
 #about .title {
-  border-bottom-color: #0086ab; }
+  border-bottom-color: #c7243a; }
 
 #skill .title {
-  border-bottom-color: #edad0b; }
+  border-bottom-color: #0086ab; }
 
 #works .title {
-  border-bottom-color: #c7243a; }
+  border-bottom-color: #edad0b; }
 
 #contact .title {
-  border-bottom-color: #c7243a; }
+  border-bottom-color: #5ec84e; }
 
 /* smart */
+@media all {
+  .constraint {
+    width: 270px; } }
 /* tablet */
+@media all and (min-width: 480px) {
+  .constraint {
+    width: 540px; } }
 /* pc */
+@media all and (min-width: 768px) {
+  .constraint {
+    width: 810px; } }
