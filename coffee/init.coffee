@@ -5,6 +5,7 @@ global = this
 class Main
   ANIMATION_IMG_NUM = 4
   constructor: ->
+    if not document.getElementById('main-canvas') then return
     @initMainCanvas()
     @startMainAnimation()
     return

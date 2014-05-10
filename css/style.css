@@ -11,6 +11,9 @@ body {
 a {
   text-decoration: none; }
 
+section {
+  margin-bottom: 40px; }
+
 .constraint {
   margin: 0 auto; }
 
@@ -18,14 +21,69 @@ a {
   font-size: 20px;
   padding: 8px;
   border-bottom: solid 3px black;
-  width: 270px; }
+  width: 270px;
+  margin-bottom: 20px; }
+
+.progress-bar {
+  background-color: #1a1a1a;
+  height: 25px;
+  padding: 5px;
+  width: 350px;
+  margin: 50px 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444; }
+
+.progress-bar span {
+  display: inline-block;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  transition: width .4s ease-in-out; }
+
+.stripes span {
+  -webkit-background-size: 30px 30px;
+  -moz-background-size: 30px 30px;
+  background-size: 30px 30px;
+  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite; }
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: 60px 0; } }
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0; }
+
+  100% {
+    background-position: 60px 0; } }
+
+.blue span {
+  background-color: #34c2e3; }
+
+.orange span {
+  background-color: #fecf23;
+  background-image: linear-gradient(top, #fecf23, #fd9215); }
+
+.green span {
+  background-color: #a5df41;
+  background-image: linear-gradient(top, #a5df41, #4ca916); }
 
 #header {
   background-color: #e3e3e3;
   overflow: hidden; }
-
-#name {
-  font-size: 40px; }
+  #header .name {
+    font-size: 28px;
+    padding: 20px 10px; }
 
 #header-nav {
   position: absolute;
@@ -33,6 +91,9 @@ a {
 
 #about .title {
   border-bottom-color: #c7243a; }
+#about .property > div {
+  padding: 4px;
+  margin-bottom: 4px; }
 
 #skill .title {
   border-bottom-color: #0086ab; }

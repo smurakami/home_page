@@ -14,19 +14,26 @@
   %script{:src => "js/jquery-2.1.0.min.js"}
   %script{:src => "js/init.js"}
 %body
-  #header
+  %section#header
     .constraint
-      #name Shintaro Murakami
-  #about
+      .name Shintaro Murakami
+  %section#about
     .constraint
       .title about
-  #skill
+      .property
+        .name 村上晋太郎 / Shintaro Murakami
+        %div 東京大学工学部電子情報工学科卒
+        %div 東京大学大学院情報理工学系研究科
+        %div 佐藤洋一研究室所属 修士一年
+  %section#skill
     .constraint
       .title skill
-  #works
+      .progress-bar.stripes.animate-stripes.blue
+        %span{style: "width: 50%;"}
+  %section#works
     .constraint
       .title works
-  #contact
+  %section#contact
     .constraint
       .title contact
 

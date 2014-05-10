@@ -10,6 +10,9 @@
     ANIMATION_IMG_NUM = 4;
 
     function Main() {
+      if (!document.getElementById('main-canvas')) {
+        return;
+      }
       this.initMainCanvas();
       this.startMainAnimation();
       return;
