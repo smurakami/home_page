@@ -105,7 +105,6 @@ section {
   #about .title {
     border-bottom-color: #c7243a; }
   #about .contents > div {
-    float: left;
     width: 270px;
     margin-bottom: 20px; }
     #about .contents > div > p {
@@ -152,7 +151,9 @@ section {
     width: 270px; }
 
   #about, #skill, #works {
-    border-bottom: 1px dashed #ddd; }
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px; }
 
   #skill ul {
     zoom: 1; }
@@ -171,11 +172,17 @@ section {
     width: 540px; }
 
   #about .property {
-    margin-top: 18px; } }
+    margin-top: 18px; }
+  #about .subtitle {
+    width: 90%; }
+  #about .study, #about .specialty {
+    float: left; } }
 /* pc */
 @media all and (min-width: 768px) {
   .constraint {
     width: 810px; }
 
   #about .subtitle {
-    width: 90%; } }
+    width: 90%; }
+  #about .contents > div {
+    float: left; } }

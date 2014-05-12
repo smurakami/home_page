@@ -176,7 +176,6 @@ section {
     border-bottom-color: $red;
   }
   .contents>div {
-    float: left;
     width: $elem-width;
     margin-bottom: 20px;
     &>p{
@@ -228,6 +227,8 @@ section {
   }
   #about, #skill, #works {
     border-bottom: 1px dashed #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
   #skill {
     ul{
@@ -245,11 +246,17 @@ section {
 
 @media all and (min-width: 480px) and (max-width: 767px) {
   .constraint {
-    width: 540px;
+    width: $elem-width * 2;
   }
   #about {
     .property {
       margin-top: 53px - 35px;
+    }
+    .subtitle {
+      width: 90%;
+    }
+    .study, .specialty {
+      float: left;
     }
   }
 }
@@ -257,14 +264,17 @@ section {
 /* pc */
 
 @media all and (min-width: 768px) {
-
   .constraint {
-    width: 810px;
+    width: $elem-width * 3;
   }
-
   #about {
     .subtitle {
       width: 90%;
+    }
+    .contents {
+      &>div{
+        float: left;
+      }
     }
   }
 }
