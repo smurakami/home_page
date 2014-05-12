@@ -1,11 +1,11 @@
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 .progress-bar {
-  background-color: #fefefe;
+  background-color: #e3e3e3;
   height: 25px;
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #eee inset, 0 1px 0 #fff; }
+  box-shadow: 0 1px 5px #ccc inset, 0 1px 0 #fff; }
 
 .progress-bar span {
   display: inline-block;
@@ -106,13 +106,24 @@ section {
   margin-bottom: 20px; }
   #skill .subtitle h3 {
     padding: 8px; }
-#skill li {
-  padding: 8px;
-  width: 254px; }
-  #skill li .skill-name {
-    margin-bottom: 5px; }
-  #skill li .progress-bar {
-    width: 100%; }
+#skill ul {
+  margin-bottom: 20px;
+  zoom: 1; }
+  #skill ul li {
+    padding: 8px;
+    width: 254px;
+    float: left; }
+    #skill ul li .skill-name {
+      margin-bottom: 5px; }
+    #skill ul li .progress-bar {
+      width: 95%; }
+  #skill ul:before, #skill ul:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #skill ul:after {
+    clear: both; }
 
 #works .title {
   border-bottom-color: #edad0b; }
@@ -121,9 +132,21 @@ section {
   border-bottom-color: #5ec84e; }
 
 /* smart */
-@media all {
+@media all and (max-width: 479px) {
   .constraint {
-    width: 270px; } }
+    width: 270px; }
+
+  #skill ul {
+    zoom: 1; }
+    #skill ul li .progress-bar {
+      width: 100%; }
+    #skill ul:before, #skill ul:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    #skill ul:after {
+      clear: both; } }
 /* tablet */
 @media all and (min-width: 480px) {
   .constraint {

@@ -35,11 +35,11 @@ $padding: 8px;
 // ============
 
 .progress-bar {
-    background-color: #fefefe;
+    background-color: $gray;
     height: 25px;
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 1px 5px #eee inset, 0 1px 0 #fff;
+    box-shadow: 0 1px 5px #ccc inset, 0 1px 0 #fff;
 }
 
 .progress-bar span {
@@ -182,15 +182,20 @@ section {
       padding: $padding;
     }
   }
-  li {
-    padding: $padding;
-    width: 270px - $padding * 2;
-    .skill-name {
-      margin-bottom: 5px;
+  ul{
+    margin-bottom: 20px;
+    li {
+      padding: $padding;
+      width: 270px - $padding * 2;
+      float: left;
+      .skill-name {
+        margin-bottom: 5px;
+      }
+      .progress-bar {
+        width: 95%;
+      }
     }
-    .progress-bar {
-      width: 100%;
-    }
+    @include clearfix;
   }
 }
 
@@ -208,10 +213,20 @@ section {
 
 /* smart */
 
-@media all {
+@media all and (max-width: 479px) {
   .constraint {
     width: 270px;
   }
+#skill {
+  ul{
+    li {
+      .progress-bar {
+        width: 100%;
+      }
+    }
+    @include clearfix;
+  }
+}
 }
 
 /* tablet */
