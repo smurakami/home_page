@@ -29,6 +29,7 @@ $blue: #0086AB;
 $green: #5EC84E;
 
 $padding: 8px;
+$elem-width: 270px;
 
 // ============
 // progress bar
@@ -134,15 +135,24 @@ section {
 .title {
   font-size: 20px;
   border-bottom: solid 3px black;
-  width: 270px;
+  width: $elem-width;
   margin-bottom: 20px;
   h2 {
     padding: $padding;
   }
 }
 
+.subtitle{
+  border-bottom: solid 2px black;
+  width: $elem-width;
+  margin-bottom: 20px;
+  h3 {
+    padding: $padding;
+  }
+}
+
 // ============
-//   Elements
+//   Base
 // ============
 
 #header {
@@ -161,32 +171,31 @@ section {
 }
 
 #about {
+  font-size: 15px;
   .title {
     border-bottom-color: $red;
   }
-  .property > div {
-    padding: 4px;
-    margin-bottom: 4px;
+  .contents>div {
+    float: left;
+    width: $elem-width;
+    margin-bottom: 20px;
+    &>p{
+      padding: $padding;
+      margin-bottom: 4px;
+    }
   }
+  @include clearfix;
 }
 
 #skill {
   .title {
     border-bottom-color: $blue;
   }
-  .subtitle{
-    border-bottom: solid 2px black;
-    width: 270px;
-    margin-bottom: 20px;
-    h3 {
-      padding: $padding;
-    }
-  }
   ul{
     margin-bottom: 20px;
     li {
       padding: $padding;
-      width: 270px - $padding * 2;
+      width: $elem-width - $padding * 2;
       float: left;
       .skill-name {
         margin-bottom: 5px;
@@ -215,33 +224,48 @@ section {
 
 @media all and (max-width: 479px) {
   .constraint {
-    width: 270px;
+    width: $elem-width;
   }
-#skill {
-  ul{
-    li {
-      .progress-bar {
-        width: 100%;
+  #about, #skill, #works {
+    border-bottom: 1px dashed #ddd;
+  }
+  #skill {
+    ul{
+      li {
+        .progress-bar {
+          width: 100%;
+        }
       }
+      @include clearfix;
     }
-    @include clearfix;
   }
-}
 }
 
 /* tablet */
 
-@media all and (min-width: 480px) {
+@media all and (min-width: 480px) and (max-width: 767px) {
   .constraint {
     width: 540px;
+  }
+  #about {
+    .property {
+      margin-top: 53px - 35px;
+    }
   }
 }
 
 /* pc */
 
 @media all and (min-width: 768px) {
+
   .constraint {
     width: 810px;
+  }
+
+  #about {
+    .subtitle {
+      width: 90%;
+    }
   }
 }
 

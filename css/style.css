@@ -81,6 +81,13 @@ section {
   .title h2 {
     padding: 8px; }
 
+.subtitle {
+  border-bottom: solid 2px black;
+  width: 270px;
+  margin-bottom: 20px; }
+  .subtitle h3 {
+    padding: 8px; }
+
 #header {
   background-color: #e3e3e3;
   overflow: hidden; }
@@ -92,20 +99,28 @@ section {
   position: absolute;
   right: 0; }
 
-#about .title {
-  border-bottom-color: #c7243a; }
-#about .property > div {
-  padding: 4px;
-  margin-bottom: 4px; }
+#about {
+  font-size: 15px;
+  zoom: 1; }
+  #about .title {
+    border-bottom-color: #c7243a; }
+  #about .contents > div {
+    float: left;
+    width: 270px;
+    margin-bottom: 20px; }
+    #about .contents > div > p {
+      padding: 8px;
+      margin-bottom: 4px; }
+  #about:before, #about:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #about:after {
+    clear: both; }
 
 #skill .title {
   border-bottom-color: #0086ab; }
-#skill .subtitle {
-  border-bottom: solid 2px black;
-  width: 270px;
-  margin-bottom: 20px; }
-  #skill .subtitle h3 {
-    padding: 8px; }
 #skill ul {
   margin-bottom: 20px;
   zoom: 1; }
@@ -136,6 +151,9 @@ section {
   .constraint {
     width: 270px; }
 
+  #about, #skill, #works {
+    border-bottom: 1px dashed #ddd; }
+
   #skill ul {
     zoom: 1; }
     #skill ul li .progress-bar {
@@ -148,10 +166,16 @@ section {
     #skill ul:after {
       clear: both; } }
 /* tablet */
-@media all and (min-width: 480px) {
+@media all and (min-width: 480px) and (max-width: 767px) {
   .constraint {
-    width: 540px; } }
+    width: 540px; }
+
+  #about .property {
+    margin-top: 18px; } }
 /* pc */
 @media all and (min-width: 768px) {
   .constraint {
-    width: 810px; } }
+    width: 810px; }
+
+  #about .subtitle {
+    width: 90%; } }
