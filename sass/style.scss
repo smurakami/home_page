@@ -1,10 +1,24 @@
 @charset 'utf-8';
 
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 
 // ======
-// colors
+// params
 // ======
 
 $white: #FFFFFF;
@@ -14,51 +28,18 @@ $yellow: #EDAD0B;
 $blue: #0086AB;
 $green: #5EC84E;
 
-// ========
-// contents
-// ========
-
-body {
-  background-color: #fff;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-weight: 400;
-  color: #444;
-}
-
-a {
-  text-decoration: none;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-.constraint {
-  margin: 0 auto;
-}
-
-.title {
-  font-size: 20px;
-  padding: 8px;
-  border-bottom: solid 3px black;
-  width: 270px;
-  margin-bottom: 20px;
-}
+$padding: 8px;
 
 // ============
 // progress bar
 // ============
 
 .progress-bar {
-    background-color: #1a1a1a;
+    background-color: #fefefe;
     height: 25px;
-    padding: 5px;
-    width: 350px;
-    margin: 50px 0;
+    width: 100%;
     border-radius: 5px;
-    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    box-shadow: 0 1px 5px #eee inset, 0 1px 0 #fff;
 }
 
 .progress-bar span {
@@ -109,14 +90,55 @@ section {
     background-color: #34c2e3;
 }
 
-.orange span {
-      background-color: #fecf23;
-      background-image: linear-gradient(top, #fecf23, #fd9215);
+.yellow span {
+      background-color: $yellow;
 }
 
 .green span {
-      background-color: #a5df41;
-      background-image: linear-gradient(top, #a5df41, #4ca916);
+      background-color: #3DB680;
+}
+
+.red span {
+  background-color: #DA5019;
+}
+
+// ========
+// contents
+// ========
+
+body {
+  background-color: #fff;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-weight: 400;
+  color: #444;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.constraint {
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 20px;
+  border-bottom: solid 3px black;
+  width: 270px;
+  margin-bottom: 20px;
+  h2 {
+    padding: $padding;
+  }
 }
 
 // ============
@@ -151,6 +173,24 @@ section {
 #skill {
   .title {
     border-bottom-color: $blue;
+  }
+  .subtitle{
+    border-bottom: solid 2px black;
+    width: 270px;
+    margin-bottom: 20px;
+    h3 {
+      padding: $padding;
+    }
+  }
+  li {
+    padding: $padding;
+    width: 270px - $padding * 2;
+    .skill-name {
+      margin-bottom: 5px;
+    }
+    .progress-bar {
+      width: 100%;
+    }
   }
 }
 

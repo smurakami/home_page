@@ -1,37 +1,11 @@
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
-body {
-  background-color: #fff;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  font-weight: 400;
-  color: #444; }
-
-a {
-  text-decoration: none; }
-
-section {
-  margin-bottom: 40px; }
-
-.constraint {
-  margin: 0 auto; }
-
-.title {
-  font-size: 20px;
-  padding: 8px;
-  border-bottom: solid 3px black;
-  width: 270px;
-  margin-bottom: 20px; }
-
 .progress-bar {
-  background-color: #1a1a1a;
+  background-color: #fefefe;
   height: 25px;
-  padding: 5px;
-  width: 350px;
-  margin: 50px 0;
+  width: 100%;
   border-radius: 5px;
-  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444; }
+  box-shadow: 0 1px 5px #eee inset, 0 1px 0 #fff; }
 
 .progress-bar span {
   display: inline-block;
@@ -70,13 +44,42 @@ section {
 .blue span {
   background-color: #34c2e3; }
 
-.orange span {
-  background-color: #fecf23;
-  background-image: linear-gradient(top, #fecf23, #fd9215); }
+.yellow span {
+  background-color: #edad0b; }
 
 .green span {
-  background-color: #a5df41;
-  background-image: linear-gradient(top, #a5df41, #4ca916); }
+  background-color: #3DB680; }
+
+.red span {
+  background-color: #DA5019; }
+
+body {
+  background-color: #fff;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-weight: 400;
+  color: #444; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+section {
+  margin-bottom: 40px; }
+
+.constraint {
+  margin: 0 auto; }
+
+.title {
+  font-size: 20px;
+  border-bottom: solid 3px black;
+  width: 270px;
+  margin-bottom: 20px; }
+  .title h2 {
+    padding: 8px; }
 
 #header {
   background-color: #e3e3e3;
@@ -97,6 +100,19 @@ section {
 
 #skill .title {
   border-bottom-color: #0086ab; }
+#skill .subtitle {
+  border-bottom: solid 2px black;
+  width: 270px;
+  margin-bottom: 20px; }
+  #skill .subtitle h3 {
+    padding: 8px; }
+#skill li {
+  padding: 8px;
+  width: 254px; }
+  #skill li .skill-name {
+    margin-bottom: 5px; }
+  #skill li .progress-bar {
+    width: 100%; }
 
 #works .title {
   border-bottom-color: #edad0b; }
