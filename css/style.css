@@ -139,8 +139,22 @@ section {
   #skill ul:after {
     clear: both; }
 
-#works .title {
-  border-bottom-color: #edad0b; }
+#works {
+  zoom: 1; }
+  #works .title {
+    border-bottom-color: #edad0b; }
+  #works .contents {
+    width: 270px;
+    height: 200px;
+    background-color: #c7243a;
+    float: left; }
+  #works:before, #works:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020"; }
+  #works:after {
+    clear: both; }
 
 #contact .title {
   border-bottom-color: #5ec84e; }

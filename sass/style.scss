@@ -211,6 +211,13 @@ section {
   .title {
     border-bottom-color: $yellow;
   }
+  .contents {
+    width: $elem-width;
+    height: 200px;
+    background-color: $red;
+    float: left;
+  }
+  @include clearfix;
 }
 
 #contact {
