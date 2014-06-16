@@ -1,5 +1,13 @@
 @charset 'utf-8';
 
+/* media querys */
+@media all and (max-width: 479px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 768px) {
+}
+
 @mixin clearfix {
   zoom: 1;
   &:before,
@@ -211,13 +219,54 @@ section {
   .title {
     border-bottom-color: $yellow;
   }
-  .contents {
-    width: $elem-width;
-    height: 200px;
-    background-color: $red;
-    float: left;
+  li {
+    margin-bottom: 30px;
+    .img {
+      width: $elem-width;
+      height: 200px;
+      background-color: $red;
+    }
+    .description {
+      .title {
+        margin: 20px 20px 20px;
+        font-size: 30px;
+        border: none;
+      }
+      .date {
+        margin: 20px 20px;
+      }
+      .text {
+        margin: 20px 20px;
+      }
+    }
   }
   @include clearfix;
+
+@media all and (max-width: 479px) {
+  li {
+    .description {
+      width: $elem-width;
+    }
+  }
+}
+@media all and (min-width: 768px) {
+  li {
+    .description {
+      width: $elem-width;
+    }
+  }
+}
+@media all and (min-width: 768px) {
+  li {
+    &>* {
+      float: left;
+    }
+    .description {
+      width: $elem-width * 2;
+    }
+    @include clearfix;
+  }
+}
 }
 
 #contact {

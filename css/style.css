@@ -1,3 +1,4 @@
+/* media querys */
 /* font */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 .progress-bar {
@@ -143,11 +144,20 @@ section {
   zoom: 1; }
   #works .title {
     border-bottom-color: #edad0b; }
-  #works .contents {
-    width: 270px;
-    height: 200px;
-    background-color: #c7243a;
-    float: left; }
+  #works li {
+    margin-bottom: 30px; }
+    #works li .img {
+      width: 270px;
+      height: 200px;
+      background-color: #c7243a; }
+    #works li .description .title {
+      margin: 20px 20px 20px;
+      font-size: 30px;
+      border: none; }
+    #works li .description .date {
+      margin: 20px 20px; }
+    #works li .description .text {
+      margin: 20px 20px; }
   #works:before, #works:after {
     display: block;
     height: 0;
@@ -155,6 +165,26 @@ section {
     content: "\0020"; }
   #works:after {
     clear: both; }
+  @media all and (max-width: 479px) {
+    #works li .description {
+      width: 270px; } }
+  @media all and (min-width: 768px) {
+    #works li .description {
+      width: 270px; } }
+  @media all and (min-width: 768px) {
+    #works li {
+      zoom: 1; }
+      #works li > * {
+        float: left; }
+      #works li .description {
+        width: 540px; }
+      #works li:before, #works li:after {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        content: "\0020"; }
+      #works li:after {
+        clear: both; } }
 
 #contact .title {
   border-bottom-color: #5ec84e; }
