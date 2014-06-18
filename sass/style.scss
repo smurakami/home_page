@@ -225,47 +225,112 @@ section {
       width: $elem-width;
       height: 200px;
       background-color: $red;
+      border-radius: 12px;
     }
-    .description {
-      .title {
-        margin: 20px 20px 20px;
-        font-size: 30px;
-        border: none;
-      }
-      .date {
-        margin: 20px 20px;
-      }
-      .text {
-        margin: 20px 20px;
+    .title {
+      margin: 20px 20px 20px;
+      font-size: 30px;
+      border: none;
+    }
+    .date {
+      margin: 20px 20px;
+    }
+    .text {
+      p {
+        line-height: 20px;
       }
     }
+    @include clearfix;
   }
   @include clearfix;
 
 @media all and (max-width: 479px) {
   li {
-    .description {
+    .title {
+      margin: 0;
       width: $elem-width;
+      p {
+        margin: 20px 0px;
+        text-align: center;
+      }
+    }
+    .date {
+      margin: 0;
+      width: $elem-width;
+      p {
+        margin: 10px 40px;
+        text-align: center;
+      }
     }
   }
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 767px) {
   li {
-    .description {
-      width: $elem-width;
-    }
-  }
-}
-@media all and (min-width: 768px) {
-  li {
-    &>* {
+    margin-bottom: 30px;
+    .img {
+      margin-bottom: 10px;
       float: left;
     }
-    .description {
+    .title {
+      margin: 0;
+      width: $elem-width;
+      float: left;
+      p {
+        margin: 60px 0px 30px;
+        text-align: center;
+      }
+    }
+    .date {
+      margin: 0;
+      width: $elem-width;
+      float: left;
+      p {
+        margin: 10px 40px;
+        text-align: center;
+      }
+    }
+    .text {
+      margin: 0;
       width: $elem-width * 2;
+      float: left;
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+@media all and (min-width: 768px) {
+  li {
+    .img {
+      float: left;
+    }
+    .title {
+      margin: 0;
+      width: $elem-width * 2;
+      float: left;
+      p {
+        margin: 10px 40px;
+      }
+    }
+    .date {
+      margin: 0;
+      width: $elem-width * 2;
+      float: left;
+      p {
+        margin: 10px 40px;
+      }
+    }
+    .text {
+      margin: 0;
+      width: $elem-width * 2;
+      float: left;
+      p {
+        margin: 10px 40px;
+      }
     }
     @include clearfix;
   }
+  @include clearfix;
 }
 }
 
